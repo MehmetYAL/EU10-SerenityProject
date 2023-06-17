@@ -21,8 +21,10 @@ public class SpartanAdminGetTest {
     public void getAllSpartans(){
         given().accept(ContentType.JSON)
                 .and().auth().basic("admin","admin")
-                .when().get("/api/spartans")
-                .then().statusCode(200)
+                .when()
+                .get("/api/spartans")
+                .then()
+                .statusCode(200)
                 .and()
                 .contentType(ContentType.JSON);
 
